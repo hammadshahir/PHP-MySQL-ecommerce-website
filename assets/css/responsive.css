@@ -1,0 +1,65 @@
+@media only screen and (max-width: 767px) {
+	.top {height: auto;overflow: hidden;}
+	.top .left {float: none;}
+	.top .left ul {margin-bottom: 0;margin-top: 10px;}
+	.top .left ul li {float: none;text-align: center;}
+	.top .right {float: none;}
+	.top .right ul {text-align: center;margin-bottom: 20px;}
+	.top .right ul li {float: none;display: inline-block;}
+}
+
+@media only screen and (max-width: 991px) {
+	.header .inner {display: block;}
+	.header .logo {display: block;width: 100%;text-align: center;}
+	.header .logo img {}
+	.header .search-area {display: block;}
+	.header .right {display: block;}
+	.header .navbar-left {text-align: center;margin-bottom: 20px;}
+	.navbar-form .form-group {display: inline-block;}
+	.navbar-form button {display: inline-block;}
+	.header .right ul {float: none;text-align: center;margin-bottom: 20px;}
+	.header .right ul li {float: none;display: inline-block;}
+	.header form {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.bx-controls a.bx-prev, .bx-controls a.bx-next {padding-top: 215px!important;}
+}
+
+@media only screen and (min-width: 501px) and (max-width: 700px) {
+	ul.bxslider li, ul.bxslider li .text {height: 300px;}
+	.bx-controls a.bx-prev,
+	.bx-controls a.bx-next {font-size: 36px;}
+	ul.bxslider li .text .inner h2 {font-size: 30px;}
+	ul.bxslider li .text .inner h3 {font-size: 20px;}
+	.bx-controls a.bx-prev, .bx-controls a.bx-next {padding-top: 120px!important;}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+	ul.bxslider li, ul.bxslider li .text {height: 250px;}
+	.bx-controls a.bx-prev,
+	.bx-controls a.bx-next {font-size: 30px;}
+	ul.bxslider li .text .inner h2 {font-size: 24px;}
+	ul.bxslider li .text .inner h3 {font-size: 16px;}
+	.bx-controls a.bx-prev, .bx-controls a.bx-next {padding-top: 100px!important;}
+}
+@media only screen and (min-width: 992px) {
+	.product .text {
+		min-height: 190px;
+	}
+	.header .inner {
+		width: 100%;
+	}
+	.header .search-area {
+		padding-right: 0;
+	}
+	.header .search-area form {
+		padding-right: 0;
+	}
+	.header .container {
+		padding-right: 0;
+	}
+}

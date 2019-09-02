@@ -1,0 +1,164 @@
+/* MENU-LEFT
+-------------------------- */
+/* layout */
+#left ul.nav {
+    margin-bottom: 2px;
+    font-size: 12px; /* to change font-size, please change instead .lbl */
+}
+#left ul.nav ul li {
+
+}
+#left ul.nav ul,
+#left ul.nav ul li {
+    list-style: none!important;
+    list-style-type: none!important;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+#left ul.nav ul {
+    padding-left: 0;
+    width: auto;
+}
+#left ul.nav ul.children {
+    padding-left: 12px;
+    width: auto;
+}
+#left ul.nav ul.children li{
+    margin-left: 0px;
+}
+#left ul.nav li a:hover {
+    text-decoration: none;
+}
+
+/*#left ul.nav li a:hover .lbl {
+    color: #999!important;
+}*/
+
+#left ul.nav li.current>a .lbl {
+    background-color: #999;
+    color: #fff!important;
+}
+
+/* parent item */
+#left ul.nav li.parent a {
+    padding: 0px;
+    color: #ccc;
+}
+#left ul.nav>li.parent>a {
+    border: solid 1px #999;
+    text-transform: uppercase;
+}    
+
+/* link tag (a)*/
+#left ul.nav li.parent ul li a {
+    color: #222;
+    border: none;
+    display:block;
+    padding-left: 5px;    
+}
+
+/* sign for parent item */
+#left ul.nav li .sign {
+    display: inline-block;
+    width: 14px;
+    padding: 5px 17px 5px 8px;
+    background-color: transparent;
+    color: #fff;
+}
+#left ul.nav li.parent>a>.sign{
+    margin-left: 0px;
+    background-color: #999;
+}
+
+/* label */
+#left ul.nav li .lbl {
+    padding: 5px 12px;
+    display: inline-block;
+}
+#left ul.nav li.current>a>.lbl {
+    color: #fff;
+}
+#left ul.nav  li a .lbl{
+    font-size: 16px;
+}
+
+/* THEMATIQUE
+------------------------- */
+/* theme 1 */
+#left ul.nav>li.item-1.parent>a {
+    border: solid 1px #ff6307;
+}
+#left ul.nav>li.item-1.parent>a>.sign,
+#left ul.nav>li.item-1 li.parent>a>.sign{
+    margin-left: 0px;
+    background-color: #ff6307;
+}
+#left ul.nav>li.item-1 .lbl {
+    color: #ff6307;
+}
+#left ul.nav>li.item-1 li.current>a .lbl {
+    background-color: #ff6307;
+    color: #fff!important;
+}
+
+/* theme 2 */
+#left ul.nav {
+    background: #fff;
+}
+#left ul.nav>li.cat-level-1 {
+    margin-bottom: 10px;
+}
+#left ul.nav>li.cat-level-1.parent>a {
+    border: solid 1px #e4144d;
+    background: #e4144d;
+    color: #fff;
+}
+#left ul.nav>li.cat-level-1.parent>a>.sign,
+#left ul.nav>li.cat-level-1 li.parent>a>.sign{
+    margin-left: 0px;
+    background-color: #e4144d;
+}
+#left ul.nav>li.cat-level-1 .lbl {
+    color: #fff;
+}
+#left ul.nav>li.cat-level-1 .lbl1 {
+    color: #e4144d;
+}
+#left ul.nav>li.cat-level-1 li.current>a .lbl {
+    background-color: #e4144d;
+    color: #fff!important;
+}
+
+/* theme 3 */
+#left ul.nav>li.item-15.parent>a {
+    border: solid 1px #94cf00;
+}
+#left ul.nav>li.item-15.parent>a>.sign,
+#left ul.nav>li.item-15 li.parent>a>.sign{
+    margin-left: 0px;
+    background-color: #94cf00;
+}
+#left ul.nav>li.item-15 .lbl {
+    color: #94cf00;
+}
+#left ul.nav>li.item-15 li.current>a .lbl {
+    background-color: #94cf00;
+    color: #fff!important;
+}
+
+/* theme 4 */
+#left ul.nav>li.item-22.parent>a {
+    border: solid 1px #ef409c;
+}
+#left ul.nav>li.item-22.parent>a>.sign,
+#left ul.nav>li.item-22 li.parent>a>.sign{
+    margin-left: 0px;
+    background-color: #ef409c;
+}
+#left ul.nav>li.item-22 .lbl {
+    color: #ef409c;
+}
+#left ul.nav>li.item-22 li.current>a .lbl {
+    background-color: #ef409c;
+    color: #fff!important;
+}
