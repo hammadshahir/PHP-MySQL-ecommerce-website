@@ -4,7 +4,7 @@ The complete ecommerce script with Paypal integration. Some of the features are 
 
 **Admin/Dashboard Area**
 
-**Multi-level Category Management**
+**Multi-level Category Management:**
 
 -- Add Category 
 -- Edit Category 
@@ -16,7 +16,7 @@ The complete ecommerce script with Paypal integration. Some of the features are 
 -- Delete Sub-Category 
 -- Manage Sub-Category Slider
 
-**Product Management**
+**Product Management:**
 
 -- Multiple Product Image
 -- Set Feature's Product
@@ -31,13 +31,13 @@ The complete ecommerce script with Paypal integration. Some of the features are 
 -- Delete Product
 -- Manage Product Category 
 
-**Oders Management**
+**Oders Management:**
 
  -- View All Order
  -- Awaiting Payment
  -- Awaiting Delivery
  
- **Payment Setting**
+ **Payment Setting:**
 
  -- Unlimited Payment Method Creation.
  -- Add / Edit / Delete Payment Method
