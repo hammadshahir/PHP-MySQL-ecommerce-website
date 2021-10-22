@@ -231,7 +231,7 @@ if (isset($_POST['form1'])) {
                                 </div>
                                 <div class="col-md-12 form-group">
                                     <label for=""><?php echo LANG_VALUE_105; ?> *</label>
-                                    <textarea name="cust_address" class="form-control" cols="30" rows="10" style="height:70px;"><?php if(isset($_POST['cust_address'])){echo $_POST['cust_address'];} ?></textarea>
+                                    <textarea id="cust_address" name="cust_address" class="form-control" cols="30" rows="10" style="height:70px;"><?php if(isset($_POST['cust_address'])){echo $_POST['cust_address'];} ?></textarea>
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_106; ?> *</label>
@@ -252,15 +252,15 @@ if (isset($_POST['form1'])) {
                                 
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_107; ?> *</label>
-                                    <input type="text" class="form-control" name="cust_city" value="<?php if(isset($_POST['cust_city'])){echo $_POST['cust_city'];} ?>">
+                                    <input id="cust_city" type="text" class="form-control" name="cust_city" value="<?php if(isset($_POST['cust_city'])){echo $_POST['cust_city'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_108; ?> *</label>
-                                    <input type="text" class="form-control" name="cust_state" value="<?php if(isset($_POST['cust_state'])){echo $_POST['cust_state'];} ?>">
+                                    <input id="cust_state" type="text" class="form-control" name="cust_state" value="<?php if(isset($_POST['cust_state'])){echo $_POST['cust_state'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_109; ?> *</label>
-                                    <input type="text" class="form-control" name="cust_zip" value="<?php if(isset($_POST['cust_zip'])){echo $_POST['cust_zip'];} ?>">
+                                    <input id="cust_zip" type="text" onblur="pesquisacep(document.getElementById('cust_zip').value);" class="form-control" name="cust_zip" value="<?php if(isset($_POST['cust_zip'])){echo $_POST['cust_zip'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_96; ?> *</label>
