@@ -90,34 +90,6 @@ foreach ($result as $row)
 
 </div>
 
-
-<?php if($home_service_on_off == 1): ?>
-<div class="service bg-gray">
-    <div class="container">
-        <div class="row">
-            <?php
-                $statement = $pdo->prepare("SELECT * FROM tbl_service");
-                $statement->execute();
-                $result = $statement->fetchAll(PDO::FETCH_ASSOC);                            
-                foreach ($result as $row) {
-                    ?>
-                    <div class="col-md-4">
-                        <div class="item">
-                            <div class="photo"><img src="assets/uploads/<?php echo $row['photo']; ?>" alt="<?php echo $row['title']; ?>"></div>
-                            <h3><?php echo $row['title']; ?></h3>
-                            <p>
-                                <?php echo nl2br($row['content']); ?>
-                            </p>
-                        </div>
-                    </div>
-                    <?php
-                }
-            ?>
-        </div>
-    </div>
-</div>
-<?php endif; ?>
-
 <?php if($home_featured_product_on_off == 1): ?>
 <div class="product pt_70 pb_70">
     <div class="container">
