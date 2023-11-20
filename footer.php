@@ -102,7 +102,7 @@ This link will be active only for 24 hours.
 			?>
 				<form action="" method="post">
 					<?php $csrf->echoInputField(); ?>
-					<h2><?php echo LANG_VALUE_93; ?></h2>
+					<h2>Subscribe</h2>
 					<div class="input-group">
 			        	<input type="email" class="form-control" placeholder="<?php echo LANG_VALUE_95; ?>" name="email_subscribe">
 			         	<span class="input-group-btn">
@@ -124,7 +124,7 @@ This link will be active only for 24 hours.
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 copyright">
-				<?php echo $footer_copyright; ?>
+				This website is created by Samiksha, Sahil, Sachin, Sakshi and Sameer.
 			</div>
 		</div>
 	</div>

@@ -735,7 +735,7 @@ foreach ($result as $row) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-4 control-label">Subscribe To Our Newsletter <span>*</span></label>
+                    <label for="" class="col-sm-4 control-label">Subscribe<span>*</span></label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="lang_value[93]" value="<?php echo $lang_ids[93]; ?>">
                     </div>
