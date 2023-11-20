@@ -295,7 +295,7 @@ if($success_message1 != '') {
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-                <div class="breadcrumb mb_30">
+                <!-- <div class="breadcrumb mb_30">
                     <ul>
                         <li><a href="<?php echo BASE_URL; ?>">Home</a></li>
                         <li>></li>
@@ -307,7 +307,7 @@ if($success_message1 != '') {
                         <li>></li>
                         <li><?php echo $p_name; ?></li>
                     </ul>
-                </div>
+                </div> -->
 
 				<div class="product">
 					<div class="row">

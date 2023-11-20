@@ -175,7 +175,7 @@ if(isset($_POST['form_contact']))
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+                        <legend><span class="glyphicon glyphicon-globe"></span> Our Cafe</legend>
                         <address>
                             <?php echo nl2br($contact_address); ?>
                         </address>
@@ -189,10 +189,6 @@ if(isset($_POST['form_contact']))
                         </address>
                     </div>
                 </div>
-
-                <h3>Find Us On Map</h3>
-                <?php echo $contact_map_iframe; ?>
-                
             </div>
         </div>
     </div>

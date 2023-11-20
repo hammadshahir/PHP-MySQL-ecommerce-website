@@ -77,14 +77,6 @@ if(isset($_POST['form1'])) {
         <div class="row">
             <div class="col-md-12">
                 <div class="user-content">
-                    <?php
-                    if($error_message != '') {
-                        echo "<script>alert('".$error_message."')</script>";
-                    }
-                    ?>
-                    <?php if($error_message2 != ''): ?>
-                        <div class="error"><?php echo $error_message2; ?></div>
-                    <?php else: ?>
                         <form action="" method="post">
                             <?php $csrf->echoInputField(); ?>
                             <div class="row">
