@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbl_color` (
   `color_id` int(11) NOT NULL,
-  `color_name` varchar(255) NOT NULL
+  `color_name` varchar(127) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -355,7 +355,7 @@ CREATE TABLE `tbl_customer` (
   `cust_s_state` varchar(100) NOT NULL,
   `cust_s_zip` varchar(30) NOT NULL,
   `cust_password` varchar(100) NOT NULL,
-  `cust_token` varchar(255) NOT NULL,
+  `cust_token` varchar(127) NOT NULL,
   `cust_datetime` varchar(100) NOT NULL,
   `cust_timestamp` varchar(100) NOT NULL,
   `cust_status` int(1) NOT NULL
@@ -377,7 +377,7 @@ INSERT INTO `tbl_customer` (`cust_id`, `cust_name`, `cust_cname`, `cust_email`, 
 
 CREATE TABLE `tbl_customer_message` (
   `customer_message_id` int(11) NOT NULL,
-  `subject` varchar(255) NOT NULL,
+  `subject` varchar(127) NOT NULL,
   `message` text NOT NULL,
   `order_detail` text NOT NULL,
   `cust_id` int(11) NOT NULL
@@ -402,7 +402,7 @@ INSERT INTO `tbl_customer_message` (`customer_message_id`, `subject`, `message`,
 
 CREATE TABLE `tbl_end_category` (
   `ecat_id` int(11) NOT NULL,
-  `ecat_name` varchar(255) NOT NULL,
+  `ecat_name` varchar(127) NOT NULL,
   `mcat_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -479,7 +479,7 @@ INSERT INTO `tbl_end_category` (`ecat_id`, `ecat_name`, `mcat_id`) VALUES
 
 CREATE TABLE `tbl_faq` (
   `faq_id` int(11) NOT NULL,
-  `faq_title` varchar(255) NOT NULL,
+  `faq_title` varchar(127) NOT NULL,
   `faq_content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -502,7 +502,7 @@ INSERT INTO `tbl_faq` (`faq_id`, `faq_title`, `faq_content`) VALUES
 
 CREATE TABLE `tbl_language` (
   `lang_id` int(11) NOT NULL,
-  `lang_name` varchar(255) NOT NULL,
+  `lang_name` varchar(127) NOT NULL,
   `lang_value` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -683,7 +683,7 @@ INSERT INTO `tbl_language` (`lang_id`, `lang_name`, `lang_value`) VALUES
 
 CREATE TABLE `tbl_mid_category` (
   `mcat_id` int(11) NOT NULL,
-  `mcat_name` varchar(255) NOT NULL,
+  `mcat_name` varchar(127) NOT NULL,
   `tcat_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -713,12 +713,12 @@ INSERT INTO `tbl_mid_category` (`mcat_id`, `mcat_name`, `tcat_id`) VALUES
 CREATE TABLE `tbl_order` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `product_name` varchar(255) NOT NULL,
+  `product_name` varchar(127) NOT NULL,
   `size` varchar(100) NOT NULL,
   `color` varchar(100) NOT NULL,
   `quantity` varchar(50) NOT NULL,
   `unit_price` varchar(50) NOT NULL,
-  `payment_id` varchar(255) NOT NULL
+  `payment_id` varchar(127) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -736,35 +736,35 @@ INSERT INTO `tbl_order` (`id`, `product_id`, `product_name`, `size`, `color`, `q
 
 CREATE TABLE `tbl_page` (
   `id` int(11) NOT NULL,
-  `about_title` varchar(255) NOT NULL,
+  `about_title` varchar(127) NOT NULL,
   `about_content` text NOT NULL,
-  `about_banner` varchar(255) NOT NULL,
-  `about_meta_title` varchar(255) NOT NULL,
+  `about_banner` varchar(127) NOT NULL,
+  `about_meta_title` varchar(127) NOT NULL,
   `about_meta_keyword` text NOT NULL,
   `about_meta_description` text NOT NULL,
-  `faq_title` varchar(255) NOT NULL,
-  `faq_banner` varchar(255) NOT NULL,
-  `faq_meta_title` varchar(255) NOT NULL,
+  `faq_title` varchar(127) NOT NULL,
+  `faq_banner` varchar(127) NOT NULL,
+  `faq_meta_title` varchar(127) NOT NULL,
   `faq_meta_keyword` text NOT NULL,
   `faq_meta_description` text NOT NULL,
-  `blog_title` varchar(255) NOT NULL,
-  `blog_banner` varchar(255) NOT NULL,
-  `blog_meta_title` varchar(255) NOT NULL,
+  `blog_title` varchar(127) NOT NULL,
+  `blog_banner` varchar(127) NOT NULL,
+  `blog_meta_title` varchar(127) NOT NULL,
   `blog_meta_keyword` text NOT NULL,
   `blog_meta_description` text NOT NULL,
-  `contact_title` varchar(255) NOT NULL,
-  `contact_banner` varchar(255) NOT NULL,
-  `contact_meta_title` varchar(255) NOT NULL,
+  `contact_title` varchar(127) NOT NULL,
+  `contact_banner` varchar(127) NOT NULL,
+  `contact_meta_title` varchar(127) NOT NULL,
   `contact_meta_keyword` text NOT NULL,
   `contact_meta_description` text NOT NULL,
-  `pgallery_title` varchar(255) NOT NULL,
-  `pgallery_banner` varchar(255) NOT NULL,
-  `pgallery_meta_title` varchar(255) NOT NULL,
+  `pgallery_title` varchar(127) NOT NULL,
+  `pgallery_banner` varchar(127) NOT NULL,
+  `pgallery_meta_title` varchar(127) NOT NULL,
   `pgallery_meta_keyword` text NOT NULL,
   `pgallery_meta_description` text NOT NULL,
-  `vgallery_title` varchar(255) NOT NULL,
-  `vgallery_banner` varchar(255) NOT NULL,
-  `vgallery_meta_title` varchar(255) NOT NULL,
+  `vgallery_title` varchar(127) NOT NULL,
+  `vgallery_banner` varchar(127) NOT NULL,
+  `vgallery_meta_title` varchar(127) NOT NULL,
   `vgallery_meta_keyword` text NOT NULL,
   `vgallery_meta_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -785,10 +785,10 @@ INSERT INTO `tbl_page` (`id`, `about_title`, `about_content`, `about_banner`, `a
 CREATE TABLE `tbl_payment` (
   `id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
-  `customer_name` varchar(255) NOT NULL,
-  `customer_email` varchar(255) NOT NULL,
+  `customer_name` varchar(127) NOT NULL,
+  `customer_email` varchar(127) NOT NULL,
   `payment_date` varchar(50) NOT NULL,
-  `txnid` varchar(255) NOT NULL,
+  `txnid` varchar(127) NOT NULL,
   `paid_amount` int(11) NOT NULL,
   `card_number` varchar(50) NOT NULL,
   `card_cvv` varchar(10) NOT NULL,
@@ -798,7 +798,7 @@ CREATE TABLE `tbl_payment` (
   `payment_method` varchar(20) NOT NULL,
   `payment_status` varchar(25) NOT NULL,
   `shipping_status` varchar(20) NOT NULL,
-  `payment_id` varchar(255) NOT NULL
+  `payment_id` varchar(127) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -817,8 +817,8 @@ INSERT INTO `tbl_payment` (`id`, `customer_id`, `customer_name`, `customer_email
 
 CREATE TABLE `tbl_photo` (
   `id` int(11) NOT NULL,
-  `caption` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL
+  `caption` varchar(127) NOT NULL,
+  `photo` varchar(127) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -841,14 +841,14 @@ INSERT INTO `tbl_photo` (`id`, `caption`, `photo`) VALUES
 
 CREATE TABLE `tbl_post` (
   `post_id` int(11) NOT NULL,
-  `post_title` varchar(255) NOT NULL,
-  `post_slug` varchar(255) NOT NULL,
+  `post_title` varchar(127) NOT NULL,
+  `post_slug` varchar(127) NOT NULL,
   `post_content` text NOT NULL,
-  `post_date` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL,
+  `post_date` varchar(127) NOT NULL,
+  `photo` varchar(127) NOT NULL,
   `category_id` int(11) NOT NULL,
   `total_view` int(11) NOT NULL,
-  `meta_title` varchar(255) NOT NULL,
+  `meta_title` varchar(127) NOT NULL,
   `meta_keyword` text NOT NULL,
   `meta_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -878,11 +878,11 @@ INSERT INTO `tbl_post` (`post_id`, `post_title`, `post_slug`, `post_content`, `p
 
 CREATE TABLE `tbl_product` (
   `p_id` int(11) NOT NULL,
-  `p_name` varchar(255) NOT NULL,
+  `p_name` varchar(127) NOT NULL,
   `p_old_price` varchar(10) NOT NULL,
   `p_current_price` varchar(10) NOT NULL,
   `p_qty` int(10) NOT NULL,
-  `p_featured_photo` varchar(255) NOT NULL,
+  `p_featured_photo` varchar(127) NOT NULL,
   `p_description` text NOT NULL,
   `p_short_description` text NOT NULL,
   `p_feature` text NOT NULL,
@@ -972,7 +972,7 @@ INSERT INTO `tbl_product_color` (`id`, `color_id`, `p_id`) VALUES
 
 CREATE TABLE `tbl_product_photo` (
   `pp_id` int(11) NOT NULL,
-  `photo` varchar(255) NOT NULL,
+  `photo` varchar(127) NOT NULL,
   `p_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1168,9 +1168,9 @@ CREATE TABLE `tbl_rating` (
 
 CREATE TABLE `tbl_service` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
+  `title` varchar(127) NOT NULL,
   `content` text NOT NULL,
-  `photo` varchar(255) NOT NULL
+  `photo` varchar(127) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1190,17 +1190,17 @@ INSERT INTO `tbl_service` (`id`, `title`, `content`, `photo`) VALUES
 
 CREATE TABLE `tbl_settings` (
   `id` int(11) NOT NULL,
-  `logo` varchar(255) NOT NULL,
-  `favicon` varchar(255) NOT NULL,
+  `logo` varchar(127) NOT NULL,
+  `favicon` varchar(127) NOT NULL,
   `footer_about` text NOT NULL,
   `footer_copyright` text NOT NULL,
   `contact_address` text NOT NULL,
-  `contact_email` varchar(255) NOT NULL,
-  `contact_phone` varchar(255) NOT NULL,
-  `contact_fax` varchar(255) NOT NULL,
+  `contact_email` varchar(127) NOT NULL,
+  `contact_phone` varchar(127) NOT NULL,
+  `contact_fax` varchar(127) NOT NULL,
   `contact_map_iframe` text NOT NULL,
-  `receive_email` varchar(255) NOT NULL,
-  `receive_email_subject` varchar(255) NOT NULL,
+  `receive_email` varchar(127) NOT NULL,
+  `receive_email_subject` varchar(127) NOT NULL,
   `receive_email_thank_you_message` text NOT NULL,
   `forget_password_message` text NOT NULL,
   `total_recent_post_footer` int(10) NOT NULL,
@@ -1213,35 +1213,35 @@ CREATE TABLE `tbl_settings` (
   `meta_title_home` text NOT NULL,
   `meta_keyword_home` text NOT NULL,
   `meta_description_home` text NOT NULL,
-  `banner_login` varchar(255) NOT NULL,
-  `banner_registration` varchar(255) NOT NULL,
-  `banner_forget_password` varchar(255) NOT NULL,
-  `banner_reset_password` varchar(255) NOT NULL,
-  `banner_search` varchar(255) NOT NULL,
-  `banner_cart` varchar(255) NOT NULL,
-  `banner_checkout` varchar(255) NOT NULL,
-  `banner_product_category` varchar(255) NOT NULL,
-  `banner_blog` varchar(255) NOT NULL,
-  `cta_title` varchar(255) NOT NULL,
+  `banner_login` varchar(127) NOT NULL,
+  `banner_registration` varchar(127) NOT NULL,
+  `banner_forget_password` varchar(127) NOT NULL,
+  `banner_reset_password` varchar(127) NOT NULL,
+  `banner_search` varchar(127) NOT NULL,
+  `banner_cart` varchar(127) NOT NULL,
+  `banner_checkout` varchar(127) NOT NULL,
+  `banner_product_category` varchar(127) NOT NULL,
+  `banner_blog` varchar(127) NOT NULL,
+  `cta_title` varchar(127) NOT NULL,
   `cta_content` text NOT NULL,
-  `cta_read_more_text` varchar(255) NOT NULL,
-  `cta_read_more_url` varchar(255) NOT NULL,
-  `cta_photo` varchar(255) NOT NULL,
-  `featured_product_title` varchar(255) NOT NULL,
-  `featured_product_subtitle` varchar(255) NOT NULL,
-  `latest_product_title` varchar(255) NOT NULL,
-  `latest_product_subtitle` varchar(255) NOT NULL,
-  `popular_product_title` varchar(255) NOT NULL,
-  `popular_product_subtitle` varchar(255) NOT NULL,
-  `testimonial_title` varchar(255) NOT NULL,
-  `testimonial_subtitle` varchar(255) NOT NULL,
-  `testimonial_photo` varchar(255) NOT NULL,
-  `blog_title` varchar(255) NOT NULL,
-  `blog_subtitle` varchar(255) NOT NULL,
+  `cta_read_more_text` varchar(127) NOT NULL,
+  `cta_read_more_url` varchar(127) NOT NULL,
+  `cta_photo` varchar(127) NOT NULL,
+  `featured_product_title` varchar(127) NOT NULL,
+  `featured_product_subtitle` varchar(127) NOT NULL,
+  `latest_product_title` varchar(127) NOT NULL,
+  `latest_product_subtitle` varchar(127) NOT NULL,
+  `popular_product_title` varchar(127) NOT NULL,
+  `popular_product_subtitle` varchar(127) NOT NULL,
+  `testimonial_title` varchar(127) NOT NULL,
+  `testimonial_subtitle` varchar(127) NOT NULL,
+  `testimonial_photo` varchar(127) NOT NULL,
+  `blog_title` varchar(127) NOT NULL,
+  `blog_subtitle` varchar(127) NOT NULL,
   `newsletter_text` text NOT NULL,
-  `paypal_email` varchar(255) NOT NULL,
-  `stripe_public_key` varchar(255) NOT NULL,
-  `stripe_secret_key` varchar(255) NOT NULL,
+  `paypal_email` varchar(127) NOT NULL,
+  `stripe_public_key` varchar(127) NOT NULL,
+  `stripe_secret_key` varchar(127) NOT NULL,
   `bank_detail` text NOT NULL,
   `before_head` text NOT NULL,
   `after_body` text NOT NULL,
@@ -1316,7 +1316,7 @@ INSERT INTO `tbl_shipping_cost_all` (`sca_id`, `amount`) VALUES
 
 CREATE TABLE `tbl_size` (
   `size_id` int(11) NOT NULL,
-  `size_name` varchar(255) NOT NULL
+  `size_name` varchar(127) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1361,12 +1361,12 @@ INSERT INTO `tbl_size` (`size_id`, `size_name`) VALUES
 
 CREATE TABLE `tbl_slider` (
   `id` int(11) NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  `heading` varchar(255) NOT NULL,
+  `photo` varchar(127) NOT NULL,
+  `heading` varchar(127) NOT NULL,
   `content` text NOT NULL,
-  `button_text` varchar(255) NOT NULL,
-  `button_url` varchar(255) NOT NULL,
-  `position` varchar(255) NOT NULL
+  `button_text` varchar(127) NOT NULL,
+  `button_url` varchar(127) NOT NULL,
+  `position` varchar(127) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1374,7 +1374,7 @@ CREATE TABLE `tbl_slider` (
 --
 
 INSERT INTO `tbl_slider` (`id`, `photo`, `heading`, `content`, `button_text`, `button_url`, `position`) VALUES
-(1, 'slider-1.jpg', 'Welcome to Fashionys.com', 'Shop Online for Latest Women Accessories', 'Shop Women Accessories', 'http://fashionys.com/product-category.php?id=4&type=mid-category', 'Center'),
+(1, 'slider-1.jpg', 'Welcome to Club Coffee', 'Shop Online for Latest Women Accessories', 'Shop Women Accessories', 'http://fashionys.com/product-category.php?id=4&type=mid-category', 'Center'),
 (2, 'slider-2.jpg', '50% Discount on All Products', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has.', 'Read More', '#', 'Center'),
 (3, 'slider-3.jpg', '24 Hours Customer Support', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has.', 'Read More', '#', 'Right');
 
@@ -1387,7 +1387,7 @@ INSERT INTO `tbl_slider` (`id`, `photo`, `heading`, `content`, `button_text`, `b
 CREATE TABLE `tbl_social` (
   `social_id` int(11) NOT NULL,
   `social_name` varchar(30) NOT NULL,
-  `social_url` varchar(255) NOT NULL,
+  `social_url` varchar(127) NOT NULL,
   `social_icon` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1421,10 +1421,10 @@ INSERT INTO `tbl_social` (`social_id`, `social_name`, `social_url`, `social_icon
 
 CREATE TABLE `tbl_subscriber` (
   `subs_id` int(11) NOT NULL,
-  `subs_email` varchar(255) NOT NULL,
+  `subs_email` varchar(127) NOT NULL,
   `subs_date` varchar(100) NOT NULL,
   `subs_date_time` varchar(100) NOT NULL,
-  `subs_hash` varchar(255) NOT NULL,
+  `subs_hash` varchar(127) NOT NULL,
   `subs_active` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1436,7 +1436,7 @@ CREATE TABLE `tbl_subscriber` (
 
 CREATE TABLE `tbl_top_category` (
   `tcat_id` int(11) NOT NULL,
-  `tcat_name` varchar(255) NOT NULL,
+  `tcat_name` varchar(127) NOT NULL,
   `show_on_menu` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1458,10 +1458,10 @@ INSERT INTO `tbl_top_category` (`tcat_id`, `tcat_name`, `show_on_menu`) VALUES
 CREATE TABLE `tbl_user` (
   `id` int(10) NOT NULL,
   `full_name` varchar(100) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `email` varchar(127) NOT NULL,
   `phone` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL,
+  `password` varchar(127) NOT NULL,
+  `photo` varchar(127) NOT NULL,
   `role` varchar(30) NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1482,7 +1482,7 @@ INSERT INTO `tbl_user` (`id`, `full_name`, `email`, `phone`, `password`, `photo`
 
 CREATE TABLE `tbl_video` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
+  `title` varchar(127) NOT NULL,
   `iframe_code` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
