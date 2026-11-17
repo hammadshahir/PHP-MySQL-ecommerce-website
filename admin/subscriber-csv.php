@@ -1,5 +1,13 @@
 <?php
+session_start();
 include 'inc/config.php';
+
+// Restrict subscriber export to authenticated admin users
+if (!isset($_SESSION['user'])) {
+	header('location: login.php');
+	exit;
+}
+
 $now = gmdate("D, d M Y H:i:s");
 header('Content-Type: text/csv; charset=utf-8');  
 header('Content-Disposition: attachment; filename=subscriber_list.csv');  
